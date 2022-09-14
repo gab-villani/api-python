@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pyodbc
+requests
+sqlalchemy
+pytz
+psycopg2

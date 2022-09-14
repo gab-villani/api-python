@@ -10,7 +10,7 @@ git add .
 git commit -m ""
 git push
 
-git checkout ""
+git checkout 
 git checkout -b ""
 
 git clone

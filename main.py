@@ -9,8 +9,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import APIRouter
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.encoders import jsonable_encoder
+from Controllers.clientes import Route_Clientes
 # from auth.auth_handler import signJWT
 from Controllers.usuarios import Route_Usuarios
+from Controllers.funcionarios import Route_Funcionarios
+from Auth.autenticacao import Route_autenticacao
 # from Controllers.spi_sensor import Route_Sensor_Spi
 # from auth.autenticacao import Route_Autenticacao
 
@@ -59,6 +62,8 @@ app.add_middleware(
 )
 
 app.include_router(Route_Usuarios, prefix='/api/usuarios')
-# app.include_router(Route_Cidades, prefix='/api/cidades')
+app.include_router(Route_Clientes,prefix='/api/clientes')
+app.include_router(Route_Funcionarios,prefix='/api/funcionarios')
+app.include_router(Route_autenticacao, prefix='/api/autenticacao')
 # app.include_router(Route_Custo_Fixo, prefix='/api/custo-fixo')
 # app.include_router(Route_Funcionarios, prefix='/api/funcionarios')

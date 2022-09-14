@@ -72,7 +72,7 @@ def alterar_usuarios(usuario: UsuarioModel, db: Session = Depends(get_db)):
    
 
 @Route_Usuarios.delete('/excluir-usuario/{id}', status_code=200, tags=["Usuarios"])
-def excluirSensor(idusuario: int, db: Session = Depends(get_db)):
+def excluir_usuarios(idusuario: int, db: Session = Depends(get_db)):
 
     alterou = db.query(Usuario).filter(Usuario.id == idusuario).delete()
     db.commit()

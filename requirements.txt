@@ -5,3 +5,6 @@ requests
 sqlalchemy
 pytz
 psycopg2
+python-multipart
+PyJWT
+python-decouple
